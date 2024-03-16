@@ -1,0 +1,223 @@
+/* -- Link to Google Fonts -- */
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Luckiest+Guy&family=Quicksand:wght@300..700&display=swap');
+
+/* -- Page Set Up -- */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+/* -- Colours -- */
+
+.color-scheme-ax {
+    background-color: #1F0229;
+    color: #E8C4F5;
+}
+
+.color-scheme-ay {
+    background-color: #E8C4F5;
+    color: #1F0229;
+}
+
+.color-scheme-bx {
+    background-color: #084A5C;
+    color: #B6E7F5;
+}
+
+.color-scheme-by {
+    background-color: #B6E7F5;
+    color: #084A5C;
+}
+
+.color-scheme-cx {
+    background-color: #1F0229;
+    color: #B6E7F5;
+}
+
+.color-scheme-cy {
+    background-color: #B6E7F5;
+    color: #1F0229;
+}
+
+.color-scheme-dx {
+    background-color: #084A5C;
+    color: #E8C4F5;
+}
+
+.color-scheme-dy {
+    background-color: #E8C4F5;
+    color: #084A5C;
+}
+
+.color-scheme-e {
+    background-color: #54AFC7;
+}
+
+/* -- Navbar -- */
+
+.navbar {
+    background-color:#B6E7F5 !important;
+    font-family: 'Luckiest Guy', cursive !important;
+    color: #084A5C !important;
+}
+
+.navbar-brand {
+    color:#084A5C;
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+#page1 {
+    color:#084A5C;
+}
+
+#page2 {
+    color:#084A5C;
+}
+
+/* -- Game -- */
+/* -- Controls Area -- */
+
+.main-title {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    margin: 0;
+}
+
+.game-area {
+    text-align: center;
+    padding: 0 0 20px 0;
+    margin: 0;
+}
+
+.icon-panel {
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* -- Question Area -- */
+
+#question-title {
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+#question-div {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+#answer-box-div {
+    text-align: center;
+    padding: 10px 0 40px 0;
+    margin: 0;
+}
+
+/* -- Timer Area -- */
+
+.timer-area {
+    margin: 0;
+    padding: 0;
+}
+
+.timer-text {
+    text-align: center;
+}
+
+/* -- Scores Area -- */
+
+#scores-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.scores {
+    text-align: center;
+}
+
+/* -- Footer -- */
+
+.footer-top {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+}
+
+.review2 {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+}
+
+.social-links {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.footer-links{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* -- Instructions Page -- */
+/* -- Instructions -- */
+
+#instructions-title {
+    padding-left: 20px;
+}
+
+.instructions {
+    padding-left: 40px;
+}
+
+/* -- Examples -- */
+
+#examples-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.examples-subtitle {
+    padding-left: 20px;
+}
+
+.examples {
+    padding-left: 40px;
+}
+
+/* -- Timer -- */
+
+#timer-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.timer-subtitle {
+    padding-left: 20px;
+}
+
+.timer-script {
+    padding-left: 40px;
+}
+
+/* -- Enjoy -- */
+
+#enjoy {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
