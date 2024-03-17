@@ -125,9 +125,9 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     margin-top: 0;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     height: 40px;
-    width: 100px;
+    width: 150px;
 }
 
 /* -- Timer Area -- */
@@ -149,6 +149,19 @@ h1, h2, h3, h4 {
 
 .scores {
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#score {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#incorrect {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* -- Footer -- */
