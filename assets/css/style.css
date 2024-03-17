@@ -72,7 +72,6 @@ h1, h2, h3, h4 {
 .navbar-brand {
     color:#084A5C;
     font-size: 2rem;
-    padding-left: 20px;
 }
 
 #page1 {
@@ -90,6 +89,7 @@ h1, h2, h3, h4 {
     text-align: center;
     padding: 20px 0 10px 0;
     margin: 0;
+    color:#E8C4F5 !important;
 }
 
 .game-area {
@@ -108,9 +108,13 @@ h1, h2, h3, h4 {
 
 /* -- Question Area -- */
 
+.question-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 #question-title {
     text-align: center;
-    padding: 20px 0 0 0;
     margin: 0;
 }
 
@@ -121,20 +125,29 @@ h1, h2, h3, h4 {
 }
 
 #answer-box{
-    padding: 10px;
-    margin-bottom: 20px;
+    
     margin-top: 0;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     height: 40px;
-    width: 150px;
+    width: 120px;
+}
+
+#submit {
+    background-color: #1F0229 !important;
+    color:#E8C4F5 !important;
 }
 
 /* -- Timer Area -- */
 
+#timer-title {
+    text-align: center;
+}
+
 .timer-area {
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .timer-text {
@@ -142,6 +155,11 @@ h1, h2, h3, h4 {
 }
 
 /* -- Scores Area -- */
+
+.score-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 #scores-title {
     text-align: center;
@@ -161,7 +179,6 @@ h1, h2, h3, h4 {
 #incorrect {
     margin-left: 20px;
     margin-right: 20px;
-    padding-bottom: 20px;
 }
 
 /* -- Footer -- */
@@ -181,6 +198,19 @@ h1, h2, h3, h4 {
     padding-top: 0;
 }
 
+.reset {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#reset {
+    background-color:#084A5C !important;
+    color:#B6E7F5 !important;
+    width: 150px;
+    height: 50px;
+}
+
 .social-links {
     text-align: center;
     font-size: 1rem;
@@ -190,6 +220,7 @@ h1, h2, h3, h4 {
 .footer-links{
     padding-left: 20px;
     padding-right: 20px;
+    color:#084A5C !important;
 }
 
 /* -- Instructions Page -- */
@@ -201,12 +232,14 @@ h1, h2, h3, h4 {
 
 .instructions {
     padding: 0 20px 20px 20px;
+    margin: 0;
 }
 
 /* -- Examples -- */
 
 #examples-title {
     text-align: center;
+    padding-top: 20px;
 }
 
 .examples-subtitle {
@@ -215,11 +248,13 @@ h1, h2, h3, h4 {
 
 .examples {
     text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 /* -- Timer -- */
 
-#timer-title {
+#set-timer-title {
     padding: 20px 20px 0 20px;
 }
 
@@ -228,7 +263,19 @@ h1, h2, h3, h4 {
 }
 
 .timer-script {
-    padding: 0 20px 0 20px;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+/* -- Restart -- */
+
+#restart {
+    padding: 20px 20px 0 20px;
+}
+
+.restart-text {
+    padding: 0 20px 20px 20px;
+    margin: 0;
 }
 
 /* -- Enjoy -- */
@@ -237,4 +284,5 @@ h1, h2, h3, h4 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 0;
 }

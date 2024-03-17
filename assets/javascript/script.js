@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
         button.addEventListener("click", function(){
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
+            } else if (this.getAttribute("data-type") === "reset") {
+                location.reload();
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -25,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function(){
 function runGame(gameType) {
 
     //Creates two random numbers between 1 and 12.
-    let num1 = Math.floor(Math.random() * 11) + 1;
-    let num2 = Math.floor(Math.random() * 11) + 1;
+    let num1 = Math.floor(Math.random() * 11)+1;
+    let num2 = Math.floor(Math.random() * 11)+1;
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
