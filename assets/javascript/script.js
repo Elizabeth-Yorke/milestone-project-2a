@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let button of buttons){
         button.addEventListener("click", function(){
-            if (this.getAttribute("data-type")==="submit") {
-                alert("You clicked Submit!");
+            if (this.getAttribute("data-type") === "submit") {
+                checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
-    runGame("addition");
 })
 
 /**
@@ -43,8 +42,25 @@ function runGame(gameType) {
     }
 }
 
-function checkAnswer() {
+/**
+ * Gets the answer from calculateCorrectAnswer()
+ * Compares the users answer with the return from calculateCorrectAnswer()
+ * Sends a Well Done! Alert if the answers match.
+ * Sends a Better luck next time Alert if the answers don't match.
+ */
 
+function checkAnswer() {
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Correct answer! Well done! :D");
+    } else {
+        alert(`You answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}. Better next time!`);
+    }
+
+    runGame(calculatedAnswer[1]);
 }
 
 /**
@@ -60,7 +76,7 @@ function calculateCorrectAnswer() {
         return [operand1 + operand2, "addition"];
     } else if (operator === "-") {
         return [operand1, "subtraction"];
-    } else if (operator === "-") {
+    } else if (operator === "x") {
         return [operand1 * operand2, "multiplication"];
     } else if (operator === "/") {
         return [operand1, "division"];
