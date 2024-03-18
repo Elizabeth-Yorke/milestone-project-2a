@@ -268,12 +268,8 @@ h1, h2, h3, h4 {
 
 /* -- Timer -- */
 
-#set-timer-title {
-    padding: 20px 20px 0 20px;
-}
-
 .timer-subtitle {
-    padding: 0 20px 0 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .timer-script {

@@ -154,7 +154,8 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-            timer = duration;
+            //timer = duration;
+            alert("Your time is up!");
         }
     }, 1000);
 }
