@@ -154,8 +154,8 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-            //timer = duration;
             alert("Your time is up!");
+            location.reload();
         }
     }, 1000);
 }
