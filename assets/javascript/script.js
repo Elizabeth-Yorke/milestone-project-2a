@@ -138,7 +138,7 @@ function displayDivisionQuestion(operand1, operand2) {
 }
 
 /**
- * Timer to start on click.
+ * Timer to count down to 0.
  */
 
 function startTimer(duration, display) {
@@ -154,13 +154,37 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-            // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+            timer = duration;
         }
     }, 1000);
 }
 
-safeTimerDisplay.onclick = function () {
-    var time = 40, // your time in seconds here
-        display = document.querySelector('#safeTimerDisplay');
+/**
+ * Novice Timer to start on click
+ */
+
+TimerDisplayNovice.onclick = function () {
+    var time = 80, // time in seconds here
+        display = document.querySelector('#TimerDisplayNovice');
+    startTimer(time, display);
+};
+
+/**
+ * Intermediate Timer to start on click
+ */
+
+TimerDisplayIntermediate.onclick = function () {
+    var time = 40, // time in seconds here
+        display = document.querySelector('#TimerDisplayIntermediate');
+    startTimer(time, display);
+};
+
+/**
+ * Advanced Timer to start on click
+ */
+
+TimerDisplayAdvanced.onclick = function () {
+    var time = 20, // time in seconds here
+        display = document.querySelector('#TimerDisplayAdvanced');
     startTimer(time, display);
 };

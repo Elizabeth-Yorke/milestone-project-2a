@@ -129,9 +129,19 @@
 <!-- Timer -->
 
         <section>
-            <div class="timer-area color-scheme-ax">
-                <h3 id="timer-title">Timer</h3>
-                <button id="safeTimerDisplay" data-type="timer">00:40</button>
+            <div class="row timer-row g-0">
+                <div class="col-md-4 timer-area color-scheme-ax">
+                    <h4 id="timer-novice">Novice</h4>
+                    <button class="timer" id="TimerDisplayNovice" data-type="timer">00:80</button>
+                </div>
+                <div class="col-md-4 timer-area color-scheme-by">
+                    <h4 id="timer-intermediate">Intermediate</h4>
+                    <button class="timer" id="TimerDisplayIntermediate" data-type="timer">00:40</button>
+                </div>
+                <div class="col-md-4 timer-area color-scheme-ax">
+                    <h4 id="timer-advanced">Advanced</h4>
+                    <button class="timer" id="TimerDisplayAdvanced" data-type="timer">00:20</button>
+                </div>
             </div>
         </section>
 

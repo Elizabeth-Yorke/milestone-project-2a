@@ -110,7 +110,6 @@ h1, h2, h3, h4 {
 
 .question-area {
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 #question-title {
@@ -144,21 +143,35 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
-.timer-area {
-    margin-left: 20px;
-    margin-right: 20px;
+.timer-row {
     padding: 20px;
     text-align: center;
 }
 
-#safeTimerDisplay {
+.timer-area {
     text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
+
+#TimerDisplayNovice {
+    background-color:#E8C4F5;
+    color:#1F0229;
+} 
+
+#TimerDisplayIntermediate {
+    background-color:#084A5C;
+    color:#B6E7F5;
+} 
+
+#TimerDisplayAdvanced {
+    background-color:#E8C4F5;
+    color:#1F0229;
+} 
 
 /* -- Scores Area -- */
 
 .score-area {
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
