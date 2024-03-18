@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">Maths Lines</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-type="navbar" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -52,58 +52,58 @@
     <div class="col-md-6 game-area color-scheme-ax">
         <a class="navbar-brand" href="index.html"><h1 class="main-title">Maths Lines</h1></a>
 		<div class="controls-area">
-			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-mug-hot icon"></i>
 			</button>
-			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-tree icon"></i>
 			</button>
-			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-bicycle icon"></i>
 			</button>
-			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-cow icon"></i>
 			</button>
 		</div>
         <div class="controls-area">
-			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-house icon"></i>
 			</button>
-			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-frog icon"></i>
 			</button>
-			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-person-hiking icon"></i>
 			</button>
-			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-regular fa-snowflake icon"></i>
 			</button>
 		</div>
         <div class="controls-area">
-			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-cable-car icon"></i>
 			</button>
-			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-bolt icon"></i>
 			</button>
-			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-mountain icon"></i>
 			</button>
-			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-plane icon"></i>
 			</button>
 		</div>
         <div class="controls-area">
-			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="division" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-brands fa-pagelines icon"></i>
 			</button>
-			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="addition" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-rocket icon"></i>
 			</button>
-			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="subtraction" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-moon icon"></i>
 			</button>
-			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel">
+			<button data-type="multiplication" class="btn btn-outline-light btn-lg icon-panel clickOn">
 				<i class="fa-solid fa-crown icon"></i>
 			</button>
 		</div>
@@ -121,7 +121,7 @@
             <span id="operand2">0</span>
             <span>=</span>
             <input id="answer-box" type="number" placeholder="Answer">
-            <button id="submit" type="button" data-type="submit" class="btn btn-outline-dark" value="submit">Submit</button>
+            <button id="submit" type="button" data-type="submit" class="btn btn-outline-dark clickOn" value="submit">Submit</button>
             </div>
         </div>
         </section>
@@ -131,16 +131,13 @@
         <section>
             <div class="row timer-row g-0">
                 <div class="col-md-4 timer-area color-scheme-ax">
-                    <h4 id="timer-novice">Novice</h4>
-                    <button class="timer" id="TimerDisplayNovice" data-type="timer">00:80</button>
+                    <button class="timer clickOn" id="TimerDisplayNovice" data-type="timer"><h4>Novice</h4></button>
                 </div>
                 <div class="col-md-4 timer-area color-scheme-by">
-                    <h4 id="timer-intermediate">Intermediate</h4>
-                    <button class="timer" id="TimerDisplayIntermediate" data-type="timer">00:40</button>
+                    <button class="timer clickOn" id="TimerDisplayIntermediate" data-type="timer"><h4>Adept</h4></button>
                 </div>
                 <div class="col-md-4 timer-area color-scheme-ax">
-                    <h4 id="timer-advanced">Advanced</h4>
-                    <button class="timer" id="TimerDisplayAdvanced" data-type="timer">00:20</button>
+                    <button class="timer clickOn" id="TimerDisplayAdvanced" data-type="timer"><h4>Advanced</h4></button>
                 </div>
             </div>
         </section>
@@ -165,7 +162,7 @@
             <p id="review">Review Us</p>
             <div class="stars"><i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star2"></i></i><i class="fa-solid fa-star star3"></i><i class="fa-solid fa-star star4"></i><i class="fa-solid fa-star star5"></i></div>
         </div>
-        <div class="col-md-3 color-scheme-by reset"><button id="reset" type="button" data-type="reset" class="btn btn-outline-dark" value="submit">Reset Game</button></div>
+        <div class="col-md-3 color-scheme-by reset"><button id="reset" type="button" data-type="reset" class="btn btn-outline-dark clickOn" value="submit">Reset Game</button></div>
         <div class="col-md-3 footer-top copyright color-scheme-bx">Copyright 2024 <i class="fa-regular fa-copyright"></i></div>
         <div class="col-md-3 footer-top social media color-scheme-by">
             <p>Share your progress</p>

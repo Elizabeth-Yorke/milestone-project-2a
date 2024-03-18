@@ -11,7 +11,7 @@ body {
     border: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: 'Luckiest Guy', cursive;
 }
 
@@ -139,10 +139,6 @@ h1, h2, h3, h4 {
 
 /* -- Timer Area -- */
 
-#timer-title {
-    text-align: center;
-}
-
 .timer-row {
     padding: 20px;
     text-align: center;
@@ -157,16 +153,28 @@ h1, h2, h3, h4 {
 #TimerDisplayNovice {
     background-color:#E8C4F5;
     color:#1F0229;
+    padding: 5px;
+    height: 100%;
+    width: 80%;
+    font-size: x-large;
 } 
 
 #TimerDisplayIntermediate {
     background-color:#084A5C;
     color:#B6E7F5;
+    padding: 5px;
+    height: 100%;
+    width: 80%;
+    font-size: x-large;
 } 
 
 #TimerDisplayAdvanced {
     background-color:#E8C4F5;
     color:#1F0229;
+    padding: 5px;
+    height: 100%;
+    width: 80%;
+    font-size: x-large;
 } 
 
 /* -- Scores Area -- */

@@ -1,17 +1,22 @@
 // Wait for the DOM to finish loading before running the game.
-// Get the button elements and add event listeners to them.
+
+/**
+ * Gets the button elements.
+ * Adds event listeners to them.
+ * Assigns functions according to button data-type.
+ */
 
 document.addEventListener("DOMContentLoaded", function(){
-    let buttons = document.getElementsByTagName("button");
+    let clickOns = document.getElementsByClassName("clickOn");
 
-    for (let button of buttons){
-        button.addEventListener("click", function(){
+    for (let clickOn of clickOns){
+        clickOn.addEventListener("click", function(){
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             } else if (this.getAttribute("data-type") === "reset") {
                 location.reload();
             } else if (this.getAttribute("data-type") === "timer") {
-                startTimer();   
+                startTimer(); 
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -75,6 +80,7 @@ function checkAnswer() {
  * Gets the operands and the operator directly from the DOM
  * Returns the correct answer
  */
+
 function calculateCorrectAnswer() {
     let operand1 = parseInt(document.getElementById('operand1').innerText);
     let operand2 = parseInt(document.getElementById('operand2').innerText);
@@ -113,11 +119,19 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++oldScore;
 }
 
+/**
+ * Displays addition questions.
+ */
+
 function displayAdditionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
 }
+
+/**
+ * Displays subtraction questions.
+ */
 
 function displaySubtractionQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
@@ -125,11 +139,19 @@ function displaySubtractionQuestion(operand1, operand2) {
 	document.getElementById("operator").textContent = "-";
 }
 
+/**
+ * Displays multiplication questions.
+ */
+
 function displayMultiplicationQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "x";
 }
+
+/**
+ * Displays division questions.
+ */
 
 function displayDivisionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1*operand2;
@@ -138,7 +160,7 @@ function displayDivisionQuestion(operand1, operand2) {
 }
 
 /**
- * Timer to count down to 0.
+ * Timer to counts down to 0.
  */
 
 function startTimer(duration, display) {
@@ -161,7 +183,7 @@ function startTimer(duration, display) {
 }
 
 /**
- * Novice Timer to start on click
+ * Novice Timer to start at 80seconds on click
  */
 
 TimerDisplayNovice.onclick = function () {
@@ -171,7 +193,7 @@ TimerDisplayNovice.onclick = function () {
 };
 
 /**
- * Intermediate Timer to start on click
+ * Intermediate Timer to start at 40 seconds on click
  */
 
 TimerDisplayIntermediate.onclick = function () {
@@ -181,7 +203,7 @@ TimerDisplayIntermediate.onclick = function () {
 };
 
 /**
- * Advanced Timer to start on click
+ * Advanced Timer to start at 20 seconds on click
  */
 
 TimerDisplayAdvanced.onclick = function () {
