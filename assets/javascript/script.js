@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
             } else if (this.getAttribute("data-type") === "timer") {
                 startTimer(); 
             } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+                let operation = this.getAttribute("data-type");
+                runGame(operation);
             }
         })
     }
@@ -31,23 +31,23 @@ document.addEventListener("DOMContentLoaded", function(){
  * and after the user's answer has been processed.
  */
 
-function runGame(gameType) {
+function runGame(operation) {
 
     //Creates two random numbers between 1 and 12.
-    let num1 = Math.floor(Math.random() * 11)+1;
-    let num2 = Math.floor(Math.random() * 11)+1;
+    let firstNumber = Math.floor(Math.random() * 11)+1;
+    let secondNumber = Math.floor(Math.random() * 11)+1;
 
-    if (gameType === "addition") {
-        displayAdditionQuestion(num1, num2);
-    } else if (gameType === "subtraction") {
-        displaySubtractionQuestion(num1, num2);
-    } else if (gameType === "multiplication") {
-        displayMultiplicationQuestion(num1, num2);
-    } else if (gameType === "division") {
-        displayDivisionQuestion(num1, num2);
+    if (operation === "addition") {
+        additionQuestion(firstNumber, secondNumber);
+    } else if (operation === "subtraction") {
+        subtractionQuestion(firstNumber, secondNumber);
+    } else if (operation === "multiplication") {
+        multiplicationQuestion(firstNumber, secondNumber);
+    } else if (operation === "division") {
+        divisionQuestion(firstNumber, secondNumber);
     } else {
-        alert(`unknown game type: ${gameType}`);
-        throw `unknown game type: ${gameType}. Aborting!`
+        alert(`unknown operation: ${operation}`);
+        throw `unknown operation: ${operation}.`
     }
 
 }
@@ -63,14 +63,15 @@ function runGame(gameType) {
 function checkAnswer() {
     let userAnswer = parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculatedAnswer[0];
+    let userRight = userAnswer === calculatedAnswer[0];
 
-    if (isCorrect) {
+    if (userRight) {
         alert("Correct answer! Well done! :D");
-        incrementScore();
+        increaseScore();
+
     } else {
         alert(`You answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}. Better luck next time!`);
-        incrementWrongAnswer();
+        increaseWrongAnswer();
     }
 
     runGame(calculatedAnswer[1]);
@@ -82,21 +83,21 @@ function checkAnswer() {
  */
 
 function calculateCorrectAnswer() {
-    let operand1 = parseInt(document.getElementById('operand1').innerText);
-    let operand2 = parseInt(document.getElementById('operand2').innerText);
-    let operator = document.getElementById('operator').innerText;
+    let partA = parseInt(document.getElementById('partA').innerText);
+    let partB = parseInt(document.getElementById('partB').innerText);
+    let symbol = document.getElementById('symbol').innerText;
 
-    if (operator === "+") {
-        return [operand1 + operand2, "addition"];
-    } else if (operator === "-") {
-        return [operand1 - operand2, "subtraction"];
-    } else if (operator === "x") {
-        return [operand1 * operand2, "multiplication"];
-    } else if (operator === "/") {
-        return [operand1 / operand2, "division"];
+    if (symbol === "+") {
+        return [partA + partB, "addition"];
+    } else if (symbol === "-") {
+        return [partA - partB, "subtraction"];
+    } else if (symbol === "x") {
+        return [partA * partB, "multiplication"];
+    } else if (symbol === "/") {
+        return [partA / partB, "division"];
     } else {
-        alert(`Unimplemented operator ${operator}`);
-        throw `Unimplemented operator ${operator}. Aborting!`;
+        alert(`Didn't recognise ${symbol} symbol.`);
+        throw `didn't recoginise ${symbol} symbol. Aborting!`;
     }
 
 }
@@ -105,7 +106,7 @@ function calculateCorrectAnswer() {
  * Gets the current score from the DOM and adds 1.
  */
 
-function incrementScore() {
+function increaseScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
 }
@@ -114,7 +115,7 @@ function incrementScore() {
  * Gets the current tally of incorrect answers from the DOM and increments it by 1
  */
 
-function incrementWrongAnswer() {
+function increaseWrongAnswer() {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
 }
@@ -123,40 +124,40 @@ function incrementWrongAnswer() {
  * Displays addition questions.
  */
 
-function displayAdditionQuestion(operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "+";
+function additionQuestion(partA, partB) {
+    document.getElementById('partA').textContent = partA;
+    document.getElementById('partB').textContent = partB;
+    document.getElementById('symbol').textContent = "+";
 }
 
 /**
  * Displays subtraction questions.
  */
 
-function displaySubtractionQuestion(operand1, operand2) {
-    document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
-	document.getElementById("operand2").textContent = operand1 < operand2 ? operand2 : operand1;
-	document.getElementById("operator").textContent = "-";
+function subtractionQuestion(partA, partB) {
+    document.getElementById("partA").textContent = partA > partB ? partA : partB;
+	document.getElementById("partB").textContent = partA < partB ? partB : partA;
+	document.getElementById("symbol").textContent = "-";
 }
 
 /**
  * Displays multiplication questions.
  */
 
-function displayMultiplicationQuestion(operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "x";
+function multiplicationQuestion(partA, partB) {
+    document.getElementById('partA').textContent = partA;
+    document.getElementById('partB').textContent = partB;
+    document.getElementById('symbol').textContent = "x";
 }
 
 /**
  * Displays division questions.
  */
 
-function displayDivisionQuestion(operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1*operand2;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "/";
+function divisionQuestion(partA, partB) {
+    document.getElementById('partA').textContent = partA*partB;
+    document.getElementById('partB').textContent = partB;
+    document.getElementById('symbol').textContent = "/";
 }
 
 /**
@@ -186,9 +187,9 @@ function startTimer(duration, display) {
  * Novice Timer to start at 80seconds on click
  */
 
-TimerDisplayNovice.onclick = function () {
+timerDisplayNovice.onclick = function () {
     var time = 80, // time in seconds here
-        display = document.querySelector('#TimerDisplayNovice');
+        display = document.querySelector('#timerDisplayNovice');
     startTimer(time, display);
 };
 
@@ -196,9 +197,9 @@ TimerDisplayNovice.onclick = function () {
  * Intermediate Timer to start at 40 seconds on click
  */
 
-TimerDisplayIntermediate.onclick = function () {
+timerDisplayIntermediate.onclick = function () {
     var time = 40, // time in seconds here
-        display = document.querySelector('#TimerDisplayIntermediate');
+        display = document.querySelector('#timerDisplayIntermediate');
     startTimer(time, display);
 };
 
@@ -206,8 +207,8 @@ TimerDisplayIntermediate.onclick = function () {
  * Advanced Timer to start at 20 seconds on click
  */
 
-TimerDisplayAdvanced.onclick = function () {
+timerDisplayAdvanced.onclick = function () {
     var time = 20, // time in seconds here
-        display = document.querySelector('#TimerDisplayAdvanced');
+        display = document.querySelector('#timerDisplayAdvanced');
     startTimer(time, display);
 };
